@@ -5,14 +5,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "out": "next build",
     "deploy2": "cross-env NODE_ENV=production firebase deploy --only hosting",
     "deploy": "firebase deploy --only functions,hosting",
-    "export": "next build && next export",
-    "export1": "next export"
+    "export": "next build && next export"
   },
   "dependencies": {
     "@types/node": "18.15.11",

@@ -3,7 +3,7 @@ import { render, screen } from '@testing-library/react'
 
 describe('Index Page', () => {
   it('Should render property', () => {
-    render(<HelloComponent />)
+    render(<HelloComponent name={'User'} />)
     const header = screen.getByRole('heading')
     expect(header).toHaveTextContent('Hello')
   })

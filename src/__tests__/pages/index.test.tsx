@@ -9,13 +9,13 @@ describe('Index Page', () => {
   })
 
   it('Should have a button', () => {
-    render(<HelloComponent />)
+    render(<HelloComponent name={'Say hello'} />)
     const button = screen.queryAllByRole('button', { hidden: true })
     expect(button.length).toBeLessThanOrEqual(1)
   })
 
   it('renders homepage unchanged', () => {
-    const { container } = render(<HelloComponent />);
+    const { container } = render(<HelloComponent name={'Another Name'} />);
     expect(container).toMatchSnapshot();
   });
 })

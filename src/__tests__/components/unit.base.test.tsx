@@ -1,4 +1,4 @@
-import HelloComponent from "@/components/test/HelloComponent"
+import HelloComponent from "@/components/basetest/HelloComponent"
 import { render, screen } from '@testing-library/react'
 
 describe('Index Page', () => {

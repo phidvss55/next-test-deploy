@@ -1,8 +1,8 @@
-import ShowAutocomplete from '@/tests/autocomplete.spec';
+import ShowAutocomplete from '@/demos/autocomplete';
 import React, { useState } from 'react';
 import { getListLane } from '@/apis/datatable.repository'
 import { useEffect } from 'react'
-import ShowDatePicker from '@/tests/datepicker.spec';
+import ShowDatePicker from '@/demos/datepicker';
 import CustomSelect from '@/components/form/FormSelect';
 
 interface Lane {

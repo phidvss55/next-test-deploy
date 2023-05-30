@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import Button from '../Button';
 
+// Unit testing
 describe('Button component', () => {
   test('renders button with correct text', () => {
     const buttonText = 'Click me';

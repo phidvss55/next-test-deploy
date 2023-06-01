@@ -4,7 +4,7 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["plugin:react/recommended", "standard-with-typescript", "plugin:prettier/recommend"],
+  "extends": ["plugin:react/recommended", "standard-with-typescript", "plugin:prettier/recommended"],
   "overrides": [],
   "parserOptions": {
     "ecmaFeatures": {
@@ -23,6 +23,5 @@
         "avoidEscape": true
       }
     ]
-  },
-  "react/jsx-uses-react": ["off"]
+  }
 }

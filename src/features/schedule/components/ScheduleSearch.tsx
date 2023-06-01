@@ -25,7 +25,7 @@ const ScheduleSearch = () => {
     }, []);
 
     return (
-        <div className="h-32 bg-green-400 w-full flex">
+        <div className="h-32 border border-gray-300 w-full flex">
             <div className='w-1/4 px-1'>
                 <ShowAutocomplete options={lanes} />
             </div>
@@ -33,7 +33,7 @@ const ScheduleSearch = () => {
                 <ShowDatePicker />
             </div>
             <div className="w-1/4 px-1">
-                <CustomSelect labelSelect='SKD' getOptionData = {(opt: Lane) => ({label: `${opt.lane_code} - ${opt.lane_name}`, value: opt.lane_code})} options={lanes} isMultiple={true}/>
+                <CustomSelect labelSelect='SKD' getOptionData={(opt: Lane) => ({ label: `${opt.lane_code} - ${opt.lane_name}`, value: opt.lane_code })} options={lanes} isMultiple={true} />
             </div>
         </div>
     );

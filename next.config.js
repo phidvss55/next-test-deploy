@@ -1,3 +1,5 @@
+const withPWA = require('next-pwa');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -6,4 +8,11 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+const pushNotificationConfig = {
+  pwa: {
+    dest: 'public',
+    sw: 'sw.js',
+  },
+};
+
+module.exports = Object.assign({}, nextConfig, withPWA(pushNotificationConfig));

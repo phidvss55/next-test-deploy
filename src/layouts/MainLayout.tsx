@@ -8,7 +8,7 @@ type PageProps = {
 const MainLayout = ({ children }: PageProps) => {
 	return (
 		<>
-			<header className="h-16 text-center bg-red-400">Header</header>
+			<header className="h-16 text-center border border-spacing-1 border-gray-300"></header>
 			<main className="flex">
 				<Sidebar />
 				{children}

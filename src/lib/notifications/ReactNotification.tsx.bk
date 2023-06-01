@@ -1,0 +1,24 @@
+import addNotification from 'react-push-notification';
+
+const NotificationCompo = () => {
+  const notifyHandle = async (str = "lorem") => {
+    addNotification({
+      title: 'Lorem ....',
+      message: 'Lorem ....',
+      duration: 4000,
+      icon: logo,
+      native: true,
+      onClick: () => window.location = ''
+    })
+  }
+
+  return (
+    <div className="flex-1">
+      <div className="flex flex-col">
+        <button onClick={() => notifyHandle()}> Notify </button>
+      </div>
+    </div>
+  );
+};
+
+export default NotificationCompo;

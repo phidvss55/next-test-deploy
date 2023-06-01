@@ -1,4 +1,4 @@
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from 'firebase/app'
 // import { getMessaging } from 'firebase/messaging';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
@@ -9,8 +9,8 @@ const firebaseConfig = {
   storageBucket: 'notify-app-eea12.appspot.com',
   messagingSenderId: '832279435998',
   appId: '1:832279435998:web:42e78e37a01524f3a3c04f',
-  measurementId: 'G-PB0FZP9QNB',
-};
+  measurementId: 'G-PB0FZP9QNB'
+}
 
-export const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig)
 // export const messaging = getMessaging(app);

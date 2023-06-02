@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { getMessaging, getToken } from 'firebase/messaging'
-import { app } from '@/utils/firebase'
-// import { messaging } from '@/utils/firebase'
+import { app, db } from '@/utils/firebase'
+import { collection, getDocs, query, where, addDoc } from 'firebase/firestore'
 
 
 const FirebaseNotify = () => {
@@ -11,11 +11,26 @@ const FirebaseNotify = () => {
       const messaging = getMessaging(app);
 
       const token = await getToken(messaging, {
-        vapidKey: 'BCoCa7q9CibTWBJh6MtEAHfh3imGWB7Iu66RfjQnN0IsRQkye1Z4cU_fbaFhZiNT6sKZIINH6a6QkG8Ow-Ulrjc'
+        vapidKey: process.env.NEXT_PUBLIC_VAPID_KEY
       })
-      console.log('token', token)
+
+      if (token) {
+        const docRef = collection(db, "tokens");
+
+        const _query = query(docRef, where("value", "==", token));
+        const querySnapshot = await getDocs(_query);
+
+        if (querySnapshot.empty) {
+          await addDoc(docRef, {
+            value: token
+          });
+        }
+      }
     } else if (permission === 'denied' || permission === 'default') {
       alert('You  denied for the notification')
+      await Notification.requestPermission().then((permission) => {
+        requestPermission()
+      })
     }
   }
 

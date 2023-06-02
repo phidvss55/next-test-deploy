@@ -1,4 +1,5 @@
-const withPWA = require('next-pwa');
+// const withPWA = require('next-pwa');
+// import withPWA from 'next-pwa';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -8,11 +9,12 @@ const nextConfig = {
   },
 };
 
-const pushNotificationConfig = {
-  pwa: {
-    dest: 'public',
-    sw: 'sw.js',
-  },
-};
+// const pushNotificationConfig = {
+//   pwa: {
+//     dest: 'public',
+//     sw: 'sw.js',
+//   },
+// };
 
-module.exports = Object.assign({}, nextConfig, withPWA(pushNotificationConfig));
+// module.exports = Object.assign({}, nextConfig, withPWA(pushNotificationConfig));
+module.exports = nextConfig;

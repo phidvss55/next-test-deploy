@@ -1,5 +1,6 @@
 import { initializeApp } from 'firebase/app';
-// import { getMessaging } from 'firebase/messaging';
+import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -13,4 +14,5 @@ const firebaseConfig = {
 };
 
 export const app = initializeApp(firebaseConfig);
-// export const messaging = getMessaging(app);
+export const auth = getAuth(app);
+export const db = getFirestore(app);

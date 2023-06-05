@@ -1,0 +1,19 @@
+GET http://localhost:3000/api/posts?title=ngon&
+Content-Type: 'application/json'
+
+###
+POST http://localhost:3000/api/posts 
+Content-Type: 'application/json'
+
+{
+  "title": "Post title 1",
+  "content": "lorem ..."
+}
+
+####
+PUT http://localhost:3000/api/posts 
+Content-Type: 'application/json'
+
+####
+DELETE http://localhost:3000/api/posts 
+Content-Type: 'application/json'

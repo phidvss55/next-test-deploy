@@ -6,7 +6,7 @@ import { SIGN_UP_PAGE } from "@/config/route/page-routes";
 const LoginPage = () => {
   return (
     <>
-      <div className="mb-8">
+      <div className="mb-8" data-cy="login-page">
         <span className="text-3xl font-semibold">Welcome to</span>
         <span className="text-4xl font-semibold text-blue-600">TaskBan</span>
       </div>

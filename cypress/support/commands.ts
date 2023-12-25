@@ -45,6 +45,10 @@ Cypress.Commands.add("loginViaUser", (user: any) => {
   cy.get("[data-cy=login-btn]").click();
 });
 
+Cypress.Commands.add("getDataCy", (dataSelector: string) => {
+  return cy.get(`[data-cy="${dataSelector}"]`);
+});
+
 // Cypress.Commands.add("registerViaUser", (user) => {
 //   cy.visit("/auth/register");
 //   cy.get("[data-cy=email]").type(user.email);
